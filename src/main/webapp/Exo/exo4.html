@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exo 4</title>
+
+</head>
+
+<body>
+    <div>
+        <input type="text" name="Référence" id="saisie" value="">
+        <input type="submit" value="Quel age as-tu" onclick="aff()" id="submit">
+    </div>
+
+    <script>
+        var tabNom = {
+            "anatole": 19,
+            "bernard": 45,
+            "christophe": 34,
+            "dominique": 55,
+            "franck": 28,
+            "georges": 78,
+            "lucas": 12,
+            "madelaine": 30,
+            "pierre": 25
+        }
+        function aff() {
+            var nom =document.getElementById("saisie").value;
+            alert(nom.charAt(0).toUpperCase() + nom.slice(1)  +" a "+tabNom[nom]+ " ans");
+        }
+        document.getElementById("submit").onclick = function() {aff()};
+    </script>
+</body>
+
+</html>

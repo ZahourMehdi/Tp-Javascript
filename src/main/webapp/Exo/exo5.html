@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Exo5</title>
+
+</head>
+
+<body>
+    <script>
+        var notes = [15, 12, 18, 14, 16, 16, 19, 13, 11, 10, 16, 15];
+
+        function moy(tabNotes) {
+            var moyenne;
+            const reducer =(x,y) => x+y;
+            moyenne = tabNotes.reduce(reducer);
+            moyenne = moyenne / tabNotes.length;
+            return moyenne.toFixed(2);
+        }
+        document.write("La moyenne vaut " + moy(notes));
+    </script>
+
+</body>
+
+</html>

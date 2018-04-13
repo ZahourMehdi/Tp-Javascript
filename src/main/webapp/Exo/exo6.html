@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exo6</title>
+    <style>
+        div {
+            height: 150px;
+            width: 150px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="submit" value="Rouge" onClick="color(this)">
+    <input type="submit" value="Vert" onClick="color(this)">
+    <input type="submit" value="Bleu" onClick="color(this)">
+    <div id="monDiv">
+    </div>
+    <script>
+
+
+        function color(c) {
+            switch (c.value) {
+                case 'Rouge':
+                    document.getElementById("monDiv").style.backgroundColor = "red";
+                    break;
+                case 'Vert':
+                    document.getElementById("monDiv").style.backgroundColor = "green";
+                    break;
+                case 'Bleu':
+                    document.getElementById("monDiv").style.backgroundColor = "blue";
+                    break;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

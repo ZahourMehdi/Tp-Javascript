@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8" />
+    <link rel="stylesheet" media="screen" href="todo_list.css" />
+</head>
+
+<body onload="loading()">
+    <div class="content">
+        <h1>TODO List</h1>
+        <ul id="todolist">
+        </ul>
+        <input id="todotxt" type="text" />
+        <button id="addtodo" type="button">Ajouter</button>
+    </div>
+    <script>
+        function loading() {
+            document.getElementById("addtodo").addEventListener("click", add);
+        }
+        function add() {
+            var text = document.getElementById("todotxt").value;
+            var elementLi = document.createElement("li");
+            var newText = document.createTextNode(text);
+            elementLi.appendChild(newText);
+            document.getElementById("todolist").appendChild(elementLi);
+            elementLi.addEventListener("click",function(e){
+               
+                if(confirm("Voulez vous supprimer l'élément"))
+                    e.currentTarget.remove();
+            });
+        
+        }
+
+
+    </script>
+</body>
+
+</html>
